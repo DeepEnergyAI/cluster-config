@@ -176,7 +176,7 @@ rbac:
   create: true
 
 sysctlImage:
-  enabled: true
+  enabled: false
   command:
     - /bin/sh
     - -xc
