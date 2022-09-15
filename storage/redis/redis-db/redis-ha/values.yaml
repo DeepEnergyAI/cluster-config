@@ -233,6 +233,7 @@ redis:
     rdbchecksum: "yes"
     # Make the db accessible from the internet
     protected-mode: "no"
+    loadmodule: "/opt/redis-stack/lib/redistimeseries.so"
 
 
   ## Custom redis.conf files used to override default settings. If this file is
