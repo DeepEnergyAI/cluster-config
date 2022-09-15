@@ -2,8 +2,10 @@
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
 image:
-  repository: redis
-  tag: 6.0.7-alpine
+  # repository: redis
+  # tag: 6.0.7-alpine
+  repository: redis/redis-stack-server
+  tag: 6.2.4-v2
   pullPolicy: IfNotPresent
 
 ## Reference to one or more secrets to be used when pulling images
@@ -461,7 +463,7 @@ persistentVolume:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  storageClass: "oci"
+  storageClass: "aws-ebs-sc"
   accessModes:
     - ReadWriteOnce
   size: 10Gi
